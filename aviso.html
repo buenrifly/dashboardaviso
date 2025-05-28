@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mensaje de aviso</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    #modal {
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #modal-content {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    #modal-content h2 {
+      margin-top: 0;
+    }
+    #close-btn {
+      margin-top: 15px;
+      padding: 8px 20px;
+      background: #0079c1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="modal">
+  <div id="modal-content">
+    <h2>⚠️ Aviso</h2>
+    <p>Versión de prueba; el uso de esta información es bajo responsabilidad del usuario.</p>
+    <button id="close-btn">Entendido</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById('close-btn').onclick = function() {
+    document.getElementById('modal').style.display = 'none';
+  };
+</script>
+
+</body>
+</html>
